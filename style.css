@@ -1,0 +1,59 @@
+
+.Color-Code{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    background-color:white;
+    width: 20rem;
+    height: 5rem;
+    border-radius: .7rem;
+    margin-top: 4rem;
+    border: 1px solid black;
+}
+.Container{
+    display:flex;
+    justify-content: center;
+}
+.Copy-Code{
+    background-color: #9e5bef;
+    width: 20rem;
+    height: 6rem;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    border-radius: 1rem;
+    transition: all .4s ease-out;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+.Copy-Code:hover{
+    background: white;
+    color: #9e5bef;
+    border: 2px solid #9e5bef;
+}
+.Eye-Droper-btn--Open{
+    background-color: #5b5bef;
+    width: 20rem;
+    height: 6rem;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    border-radius: 1rem;
+    transition: all .4s ease-out;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+.Eye-Droper-btn--Open:hover{
+    background: white;
+    color: #5b5bef;
+    border: 2px solid #5b5bef;
+}
+@media only screen and (max-width:342px) {
+    .Color-Code{ width: 100%;}
+    .Eye-Droper-btn--Open{width: 100%;}
+    .Container{width: 100%;}
+    .Parent{width: 100%;}
+    .Copy-Code{width: 100%;}
+}

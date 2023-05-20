@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Eye Droper</title>
+</head>
+<body>
+    <div class="Container">
+        <div class="Parent">
+            <h1 id="Color-Code" class="Color-Code">#000</h1>
+           <button class="Eye-Droper-btn--Open" onclick=" EyeDropperFunction()">Click For Use</button>
+           <br>
+           <button class="Copy-Code" onclick="CopyHexCodeHandler()">Copy Hex Code</button>
+        </div>
+    </div>
+
+    <script>
+    const Color_CodeElem=document.getElementById('Color-Code');
+    
+    function EyeDropperFunction(){
+    const eyeDropper=new EyeDropper();
+    eyeDropper.open().then((Code)=>{
+     Color_CodeElem.innerHTML=Code.sRGBHex;
+
+     if(Code.sRGBHex=='#ffffff'){
+        Color_CodeElem.style.backgroundColor='black';
+     }else{
+        Color_CodeElem.style.color='white'
+     }
+
+     Color_CodeElem.style.backgroundColor=Code.sRGBHex;
+
+    });
+
+    }
+     
+    function CopyHexCodeHandler(){
+        navigator.clipboard.writeText(Color_CodeElem.innerHTML);
+        alert("The Code is Copied");
+    }
+
+    </script>
+</body>
+</html>
